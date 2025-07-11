@@ -1,10 +1,28 @@
-HELP.md
+# === General ===
+*.log
+*.class
+*.jar
+*.war
+*.iml
+*.db
+.env
+/application.properties
+
+# === Maven ===
 target/
 .mvn/wrapper/maven-wrapper.jar
+
+# Exclude target/build inside src manually (optional, usually unnecessary unless you're doing something special)
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# === Gradle ===
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+.nb-gradle/
+
+# === Spring Tool Suite (STS) ===
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +31,19 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# === IntelliJ IDEA ===
+.idea/
 *.iws
-*.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# === NetBeans ===
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
 
-### VS Code ###
+# === Visual Studio Code ===
 .vscode/
+
+# === Help Files ===
+HELP.md
